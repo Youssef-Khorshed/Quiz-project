@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Quiz_site1">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="148dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="92dp"
+        android:text="Question :"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/time_no"
+        android:layout_width="101dp"
+        android:layout_height="50dp"
+        android:text="30"
+        android:textColor="#32CA39"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/q_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="98dp"
+        android:text="1"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/q_text"
+        android:layout_width="385dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:paddingLeft="10dp"
+        android:text="120  -  99 "
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <RadioGroup
+        android:id="@+id/res"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q_text">
+
+        <RadioButton
+            android:id="@+id/ans_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="21" />
+
+        <RadioButton
+            android:id="@+id/ans_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="19" />
+
+        <RadioButton
+            android:id="@+id/ans_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="17" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:background="@color/black"
+        android:text="Confirm"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/answer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="315dp"
+        android:layout_marginRight="315dp"
+        android:text="21"
+        android:textColor="#43A047"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/answer2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/res"
+        app:layout_constraintTop_toBottomOf="@+id/q_text" />
+
+    <TextView
+        android:id="@+id/answer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="315dp"
+        android:layout_marginRight="315dp"
+        android:layout_marginBottom="30dp"
+        android:text="19"
+        android:textColor="#E53935"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/answer3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/res"
+        app:layout_constraintTop_toBottomOf="@+id/answer1" />
+
+    <TextView
+        android:id="@+id/answer3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginEnd="313dp"
+        android:layout_marginRight="313dp"
+        android:layout_marginBottom="106dp"
+        android:text="17"
+        android:textColor="#E53935"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/res"
+        app:layout_constraintTop_toBottomOf="@+id/answer2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
